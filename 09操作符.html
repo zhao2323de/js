@@ -44,6 +44,18 @@
 			console.log(100 / "2");
 			//  %
 			console.log(9 % 4);
+			
+			// 一元运算符只需要一个操作数
+			// +不对数字产生影响
+			var a = 123;
+			a = +a;
+			console.log(a);
+			// -对数字进行取反，先转换成number，再取反
+			a = "18";
+			console.log(-a);
+			
+			var num = 1 + +"2" + 3;
+			console.log(num);
 		</script>
 	</head>
 	<body>
