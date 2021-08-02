@@ -40,6 +40,14 @@
 			h = parseFloat(h)
 			console.log(h)
 			console.log(typeof h)
+			
+			// 将其他数据类型转换为boolean
+			// 数字除了0和undefined都是true,字符串除了空串都是true,null转换为false
+			var i = 123;
+			console.log(Boolean(i))
+			console.log(Boolean(0))
+			console.log(Boolean(undefined))
+			console.log(Boolean(""))
 		</script>
 	</head>
 	<body>
