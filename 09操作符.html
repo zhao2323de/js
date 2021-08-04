@@ -56,6 +56,69 @@
 			
 			var num = 1 + +"2" + 3;
 			console.log(num);
+			
+			// 赋值运算符
+			var x = 5;
+			console.log(x+=5);
+			console.log(x-=5);
+			console.log(x*=5);
+			console.log(x/=5);
+			
+			// 关系运算符
+			console.log(5>10);
+			console.log(10>5);
+			console.log(10>=10);
+			// 对非数值进行比较会转换成数字
+			// true:1 null:0
+			console.log(10>=true);
+			console.log(2 > true);
+			// 任何值和undefined比较都是false
+			console.log(1>undefined);
+			// 两侧都是字符串会分别比较字符的unicode编码,编码详情https://www.runoob.com/w3cnote/charset-encoding.html
+			console.log("1">"5");
+			console.log("11"<"5");
+			console.log("a"<"b");
+			console.log("abcde"<"b");
+			
+			//相等运算符
+			console.log( 1 == 1 );
+			// 会进行自动类型转换
+			console.log("1" == 1 );
+			console.log("1" == true);
+			// undefined衍生自null
+			console.log( undefined == null );
+			// NaN不和任何值相等，包括它本身
+			console.log(NaN == NaN)
+			
+			// 可使用isNaN函数判断是否为NaN
+			var b = NaN
+			console.log(isNaN(b))
+			
+			//  不相等运算！=
+			console.log(5 != 5);
+			console.log("abc" != "abc");
+			console.log("55" != 55)
+			
+			// 全等 ===
+			// 不会做自动类型转换，类型不同直接返回false
+			console.log("123" === 123)
+			console.log(null === undefined)
+			
+			// 不全等！==
+			// 同样不会做自动类型转换
+			console.log(1 !== "1")
+			
+			// 三元运算符
+			// 条件表达式?语句1:语句二
+			// 值为true执行语句1，值为false执行语句二
+			10>5? console.log("yes"):console.log("no")
+			var x = 5; var y = 10; var c =20
+			// 获取最大值
+			var max = x > y ? x : y;
+			max = max > c ? max : c;
+			var max2 = a > b ? (a > c ? a : c):(b > c ? b : c)
+			console.log(max)
+			console.log(max2)
 		</script>
 	</head>
 	<body>
