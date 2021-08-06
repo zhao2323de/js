@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			// 基本数据类型都是单一值，值和值之间没有联系
+			// 对象属于复合数据类型
+			// 内建对象：ES标准定义的对象，在任何的ES实现中都可以使用
+			// Math,String,Number,Boolean,Function,Object...
+			// 宿主对象：js运行环境提供的对象，主要指浏览器提供的对象
+			// DOM,BOM
+			// 自定义对象
+			
+			var obj = new Object();
+			// 对象名.属性名=属性值
+			obj.name = "对象"
+			obj.gender = "男"
+			obj.age = 18
+			console.log(obj)
+			console.log(obj.age);
+			// 读取变量中没有的属性会返回undefined
+			console.log(obj.age2);
+			// 删除对象的属性
+			delete obj.name;
+			console.log(obj.name)
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
