@@ -17,10 +17,17 @@
 			// 向原型对象中添加属性a
 			Person.prototype.a = 123;
 			console.log(per.a)
+			console.log("a" in per)
+			console.log(per.hasOwnProperty("a"))
 			// 当访问对象的一个属性或方法时，他会在对象自身中寻找，如果找到则直接使用，未找到则进入原型对象中寻找
 			per.a = 456;
 			console.log(per.a)
 			// 以后创建构造函数时，可以将这些对象的共有属性和方法同意添加到构造函数的原型对象中
+			
+			// 原型对象也是对象，所以他也有原型
+			// Object是祖先
+			console.log(per.__proto__.__proto__.hasOwnProperty("hasOwnProperty"))
+			
 		</script>
 	</head>
 	<body>
