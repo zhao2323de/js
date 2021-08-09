@@ -10,11 +10,13 @@
 			function Person(name,age,gender){
 				this.name = name;
 				this.age = age;
-				this.gender = gender
+				this.gender = gender;
 				// 为提高性能可将函数写在全局作用域中
-				this.sayhello = function (){
-					alert(this);
-				}
+				this.sayhello = fun;
+			}
+			// 定义在全局作用域中污染了全局作用域的命名空间，此时可使用原型prototype实现
+			function fun(){
+				alert(this);
 			}
 			var per = new Person("张三",16,1);
 			console.log(per)
