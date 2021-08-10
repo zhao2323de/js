@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			// 对象分为：内建对象，宿主对象，自定义对象
+			// 数组（array）也是一个对象，数组使用数字下标作为索引操作元素
+			// 索引index从0开始
+			
+			var arr = new Array();
+			console.log(typeof arr)
+			// 添加元素
+			arr[0] = 1;
+			arr[1] = 2;
+			console.log(arr)
+			console.log(arr[1])
+			// 不存在则返回undefined
+			console.log(arr[3]);
+			
+			console.log(arr.length)
+			// 对于非连续的数组，length会获取到最大索引+1,尽量不要写非连续的数组
+			arr[10] = 10;
+			console.log(arr.length)
+			
+			// 如果修改的length大于原长度，多出的部分会空出来
+			arr.length = 100;
+			console.log(arr.length)
+			// 如果修改的length小于原长度，多出的部分会删除
+			arr.length = 1;
+			console.log(arr)
+			
+			// 像数组最后一个位置添加元素
+			arr[arr.length] = 100;
+			console.log(arr)
+			
+			// 使用字面量创建数组
+			var arr2 = [1,2,3,4,5,6,7];
+			console.log(arr2)
+			
+			// 使用构造函数创建
+			var arr3 = new Array(10,20,30);
+			console.log(arr3)
+			var arr4 = new Array(10)
+			console.log(arr4)
+			
+			// 数组中的元素可以是任意数据类型
+			arr2.push("aaa")
+			arr2.push(function(){alert("haha")});
+			console.log(arr2);
+			
+			// array数组方法详见https://www.runoob.com/jsref/jsref-obj-array.html,重要,需要熟练掌握
+			var arra = [];
+			// push
+			var result = arra.push("a","b","c");
+			console.log(arra);
+			console.log(result)
+			// pop
+			result = arra.pop();
+			console.log(arra);
+			console.log(result);
+			// unshift
+			result = arra.unshift("add");
+			console.log(arra);
+			console.log(result);
+			// shift
+			result = arra.shift();
+			console.log(arra);
+			console.log(result);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
