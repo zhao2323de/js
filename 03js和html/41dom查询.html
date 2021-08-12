@@ -129,7 +129,7 @@
 		alert("共有"+city.children.length+"个子节点");
 	}
 	// 查找#phone下第一个节点
-	btn06 = document.getElementById("btn06")
+	var btn06 = document.getElementById("btn06");
 	btn06.onclick = function(){
 		var phone = document.getElementById("phone");
 		// firstChild同样包括空白节点
@@ -138,11 +138,51 @@
 		alert(phone.firstElementChild.innerHTML)
 		
 	}
+	
+	// 获取父节点和兄弟节点
+	// parentNode属性表示当前节点的父节点
+	// previousSibling属性表示当前节点的前一个兄弟节点
+	// nextSibling属性表示当前节点的后一个兄弟节点
+	// previousElementSibling属性表示当前元素的前一个兄弟元素
+	
 	// 返回#bj父亲节点
+	var btn07 = document.getElementById("btn07")
+	btn07.onclick = function(){
+		var bj = document.getElementById("bj")
+		console.log(bj.parentNode)
+		alert(bj.parentNode.innerText)
+	}
 	// 返回#android前一个兄弟节点
+	var btn08 = document.getElementById("btn08")
+	btn08.onclick = function(){
+		var android = document.getElementById("android")
+		// previousSibling也会获取空白文本
+		console.log(android.previousSibling)
+		console.log(android.previousElementSibling)
+		alert(android.previousElementSibling.innerHTML)
+	}
 	// 返回#username的value属性值
+	var btn09 = document.getElementById("btn09")
+	btn09.onclick = function(){
+		var username = document.getElementById("username")
+		console.log(username.value)
+		alert(username.value)
+	}
 	// 设置#username的value属性值
+	var btn10 = document.getElementById("btn10")
+	btn10.onclick = function(){
+		var username = document.getElementById("username");
+		var newusername = prompt("请输入新的username");
+		username.value = newusername;
+	}
 	// 返回#bj的文本值
+	var btn11 = document.getElementById("btn11")
+	btn11.onclick = function(){
+		var bj = document.getElementById("bj");
+		// alert(bj.innerText);
+		// 第一个子节点是文本节点，通过nodevalue可获取文本节点的文本值
+		alert(bj.firstChild.nodeValue);
+	}
 </script>
 
 <style type="text/css">
