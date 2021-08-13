@@ -67,7 +67,10 @@
 	var allA = document.getElementsByTagName("a");
 	// 给超链接添加点击事件
 	for(var i = 0;i < allA.length;i++){
+		console.log("for循环正在执行"+i)
 		allA[i].onclick = function(){
+			// for循环会在页面加载完成后立即执行，响应函数在超链接点击时才执行，因此响应函数执行时，for循环已经执行完毕
+			console.log("响应函数正在执行"+i);
 			// this是点击的超链接
 			console.log(this);
 			// 获取当前tr
